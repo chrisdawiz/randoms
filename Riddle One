@@ -1,0 +1,21 @@
+# This is the game script
+# Riddle one
+print ("What occurs once in a minute, \ntwice in a moment, \nand never in a thousand years?")
+secret_answer = "m"
+guess = ""
+guess_count = 0
+guess_limit = 3
+
+out_of_guesses = False
+
+while guess != secret_answer and not(out_of_guesses):
+    if guess_count < guess_limit:
+        guess = input("Enter Your Guess: ").lower()
+        guess_count += 1
+    else:
+        out_of_guesses = True
+
+if out_of_guesses:
+    print("Out of Guesses, You Lose")
+else:
+   print("You Win")
